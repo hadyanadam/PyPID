@@ -1,12 +1,12 @@
 class Pid():
-    def __init__(self, kp, kd, ki, sp):
+    def __init__(self, kp:int, kd:int, ki:int, sp:int):
         self.kp = kp
         self.kd = kd
         self.ki = ki
         self.sp = sp
         self.last_error = 0
 
-    def accumulate(self, value):
+    def accumulate(self, value:int) -> int:
         error = sp - value
         p = self.kp * error
         d1 = self.kd * 10
